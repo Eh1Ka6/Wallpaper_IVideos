@@ -55,8 +55,9 @@ namespace Player
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new AForge.Controls.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.videoSourcePlayer = new AForge.Controls.VideoSourcePlayer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.mainMenuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -69,7 +70,7 @@ namespace Player
             this.fileToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(1908, 24);
+            this.mainMenuStrip.Size = new System.Drawing.Size(1350, 24);
             this.mainMenuStrip.TabIndex = 0;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
@@ -147,7 +148,7 @@ namespace Player
             // fpsLabel
             // 
             this.fpsLabel.Name = "fpsLabel";
-            this.fpsLabel.Size = new System.Drawing.Size(1893, 17);
+            this.fpsLabel.Size = new System.Drawing.Size(1335, 17);
             this.fpsLabel.Spring = true;
             this.fpsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -155,52 +156,40 @@ namespace Player
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fpsLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 963);
+            this.statusStrip.Location = new System.Drawing.Point(0, 707);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1908, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1350, 22);
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.pictureBox1);
+            this.mainPanel.Controls.Add(this.button2);
             this.mainPanel.Controls.Add(this.button1);
+            this.mainPanel.Controls.Add(this.pictureBox1);
             this.mainPanel.Controls.Add(this.videoSourcePlayer);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 24);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1908, 939);
+            this.mainPanel.Size = new System.Drawing.Size(1350, 683);
             this.mainPanel.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1121, 348);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(299, 242);
+            this.pictureBox1.Size = new System.Drawing.Size(1366, 768);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(1037, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 53);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "load video";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // videoSourcePlayer
             // 
             this.videoSourcePlayer.AutoSizeControl = true;
             this.videoSourcePlayer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.videoSourcePlayer.ForeColor = System.Drawing.Color.White;
-            this.videoSourcePlayer.Location = new System.Drawing.Point(793, 348);
+            this.videoSourcePlayer.Location = new System.Drawing.Point(514, 220);
             this.videoSourcePlayer.Name = "videoSourcePlayer";
             this.videoSourcePlayer.Size = new System.Drawing.Size(322, 242);
             this.videoSourcePlayer.TabIndex = 0;
@@ -209,12 +198,40 @@ namespace Player
             this.videoSourcePlayer.NewFrame += new AForge.Controls.VideoSourcePlayer.NewFrameHandler(this.videoSourcePlayer_NewFrame);
             this.videoSourcePlayer.PlayingFinished += new AForge.Video.PlayingFinishedEventHandler(this.videoSourcePlayer_PlayingFinished);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(1040, 91);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(168, 64);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "NextSequence";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button1.UseCompatibleTextRendering = true;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(1040, 193);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 64);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Quit";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button2.UseCompatibleTextRendering = true;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1908, 985);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.ControlBox = false;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.statusStrip);
@@ -257,9 +274,10 @@ namespace Player
         private System.Windows.Forms.ToolStripStatusLabel fpsLabel;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.Panel mainPanel;
-        private Button button1;
         private AForge.Controls.PictureBox pictureBox1;
         private VideoSourcePlayer videoSourcePlayer;
+        private Button button2;
+        private Button button1;
     }
 }
 

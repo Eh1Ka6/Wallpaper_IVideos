@@ -66,16 +66,24 @@ namespace Player
                 // Which button on y axis 
                 if (hookStruct.pt.x > 1030 && hookStruct.pt.x < 1180)
                 {
-                    if (hookStruct.pt.y > 119 && hookStruct.pt.y < 165 )
+                    if (hookStruct.pt.y > 107 && hookStruct.pt.y < 165 )
                     {
                         Console.WriteLine(hookStruct.pt.x + ", " + hookStruct.pt.y);
                         object sender = new object();
                         EventArgs e = new EventArgs();
                         Mf.Button1_Click(sender, e );
                     }
+
+                    if (hookStruct.pt.y > 207 && hookStruct.pt.y < 268)
+                    {
+                        Console.WriteLine(hookStruct.pt.x + ", " + hookStruct.pt.y);
+                        object sender = new object();
+                        EventArgs e = new EventArgs();
+                        Mf.Button2_Click(sender, e);
+                    }
                 }
 
-                
+                Console.WriteLine(hookStruct.pt.x + ", " + hookStruct.pt.y);
 
             }
 

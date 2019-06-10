@@ -23,18 +23,20 @@ namespace Player
     public partial class MainForm : Form
     {
         private Stopwatch stopWatch = null;
-
+        private string path;
         // Class constructor
         public MainForm( )
         {
             
             InitializeComponent( );
-          //  if (openFileDialog.ShowDialog() == DialogResult.OK)
-           // {
-                // create video source
-                //FileVideoSource fileSource = new FileVideoSource(openFileDialog.FileName);
-                Console.WriteLine(openFileDialog.FileName);
-                FileVideoSource fileSource = new FileVideoSource(@"C:\Users\15922_000\Desktop\Secret.avi");
+            //  if (openFileDialog.ShowDialog() == DialogResult.OK)
+            // {
+            // create video source
+            //FileVideoSource fileSource = new FileVideoSource(openFileDialog.FileName);
+            path = System.IO.Path.GetDirectoryName(Application.StartupPath).Substring(0, System.IO.Path.GetDirectoryName(Application.StartupPath).Length-3);
+            Console.WriteLine( @"C:\Program Files (x86)\Default Company Name\Setup1\ressources\shym");
+                
+               FileVideoSource fileSource = new FileVideoSource(@"C:\Program Files (x86)\Default Company Name\Setup1\ressources\shym.avi");
                 // open it
                 OpenVideoSource(fileSource);
                
@@ -309,13 +311,26 @@ namespace Player
            // if (openFileDialog.ShowDialog() == DialogResult.OK)
             //{
                 // create video source
-                FileVideoSource fileSource = new FileVideoSource(@"C:\Users\15922_000\Desktop\Secret.avi");
+                FileVideoSource fileSource = new FileVideoSource(@"C:\Program Files (x86)\Default Company Name\Setup1\ressources\shym.avi");
 
                 // open it
                 OpenVideoSource(fileSource);
 
             //}
         }
+        public void Button2_Click(object sender, EventArgs e)
+        {
+            CloseCurrentVideoSource();
+            // if (openFileDialog.ShowDialog() == DialogResult.OK)
+            //{
+            // create video source
+            Application.Exit();
 
+            //}
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

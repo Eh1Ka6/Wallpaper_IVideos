@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Player", "Player.csproj", "{B31C0650-991B-4B28-9864-AE80C1785A3F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{76F71B36-1364-496C-9858-11C4FBDA9D25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,13 @@ Global
 		{B31C0650-991B-4B28-9864-AE80C1785A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B31C0650-991B-4B28-9864-AE80C1785A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B31C0650-991B-4B28-9864-AE80C1785A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F71B36-1364-496C-9858-11C4FBDA9D25}.Debug|Any CPU.ActiveCfg = Debug
+		{76F71B36-1364-496C-9858-11C4FBDA9D25}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {639BB1EA-D87A-43A8-97E1-EEEC97F51170}
 	EndGlobalSection
 EndGlobal
