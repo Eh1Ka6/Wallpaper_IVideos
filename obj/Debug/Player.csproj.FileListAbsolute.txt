@@ -57,3 +57,4 @@ C:\Users\15922\Documents\GitHub\Wallpaper_IVideos\obj\Debug\Player.csproj.Genera
 C:\Users\15922\Documents\GitHub\Wallpaper_IVideos\obj\Debug\Player.csproj.CoreCompileInputs.cache
 C:\Users\15922\Documents\GitHub\Wallpaper_IVideos\obj\Debug\Player.exe
 C:\Users\15922\Documents\GitHub\Wallpaper_IVideos\obj\Debug\Player.pdb
+C:\Users\15922\Documents\GitHub\Wallpaper_IVideos\obj\Debug\Player.csprojResolveAssemblyReference.cache
